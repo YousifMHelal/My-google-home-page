@@ -1,308 +1,211 @@
-import profile from "./profile.png";
-import logo from "./Logo.png";
+import { BsPaypal } from "react-icons/bs";
+import { CgPexels } from "react-icons/cg";
 import {
+  FaDev,
+  FaDribbble,
   FaFacebook,
+  FaFire,
+  FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
-  FaTwitch,
-  FaGithub,
-  FaStackOverflow,
-  FaDev,
-  FaFreeCodeCamp,
   FaPinterestP,
-  FaDribbble,
+  FaStackOverflow,
   FaTiktok,
+  FaTwitch,
+  FaYoutube,
 } from "react-icons/fa";
+import { MdDraw } from "react-icons/md";
+import { SiNextdotjs } from "react-icons/si";
+import { GiMonkey } from "react-icons/gi";
 import {
-  SiUpwork,
   SiGmail,
-  SiLeetcode,
-  SiUdemy,
-  SiEdx,
-  SiUnsplash,
-  SiValorant,
-  SiAmazon,
   SiTailwindcss,
+  SiUnsplash,
+  SiUpwork,
+  SiValorant,
 } from "react-icons/si";
-import { BsPaypal } from "react-icons/bs";
-import { AiFillCamera } from "react-icons/ai";
-import { FiCodepen } from "react-icons/fi";
-import { GiMonkey, GiWaves } from "react-icons/gi";
-import { CgPexels } from "react-icons/cg";
-import { TbBrandTed, TbBooksOff, TbBrandFramerMotion } from "react-icons/tb";
-import { RiEnglishInput } from "react-icons/ri";
-import { DiCssTricks, DiW3C } from "react-icons/di";
+import { TbBrandTed } from "react-icons/tb";
+import logo from "./Logo.png";
+import shadcn from "./shadcn.png";
+import busuu from "./busuu.png";
+import gpt from "./gpt.svg";
+import profile from "./profile.png";
 
 function App() {
   return (
-    // -----Info-----
-    <div className="mt-8 flex items-center flex-col">
-      <img
-        className="w-[100px] text-center rounded-full border-2 blue-border border-transparent"
-        src={profile}
-        alt="Joe"
-      />
-      <h2 className="bg-gradient-to-r from-start-blue to-end-blue bg-clip-text text-3xl mt-2 font-bold heading">
-        Yousif Mamdouh
-      </h2>
-      <div className="flex mt-3">
-        <a href="https://yousifmhelal.github.io/My-portfolio/">
-          <img className="icon w-[2rem]" src={logo} alt="yousif" />
-        </a>
-        <a href="https://www.facebook.com/">
-          <FaFacebook className="icon" style={{ color: "#1877f2" }} />
-        </a>
-        <a href="https://www.instagram.com/">
-          <FaInstagram className="icon" style={{ color: "#e1306c" }} />
-        </a>
-        <a href="https://www.linkedin.com/">
-          <FaLinkedinIn className="icon" style={{ color: "#0a66c2" }} />
-        </a>
-        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">
-          <SiGmail className="icon" style={{ color: "#EA4335" }} />
-        </a>
-        <a href="https://www.youtube.com/">
-          <FaYoutube className="icon" style={{ color: "#ff0000" }} />
-        </a>
-        <a href="https://www.twitch.tv/">
-          <FaTwitch className="icon" style={{ color: "#9146ff" }} />
-        </a>
-        <a href="https://github.com/">
-          <FaGithub className="icon" style={{ color: "#f5f5f5" }} />
-        </a>
-        <a href="https://www.upwork.com">
-          <SiUpwork className="icon" style={{ color: "#73bb44" }} />
-        </a>
-        <a href="https://www.paypal.com/">
-          <BsPaypal className="icon" style={{ color: "#003087" }} />
-        </a>
+    <div className="min-h-screen flex flex-col items-center py-10 bg-[#020817] px-4">
+      {/* -----Info----- */}
+      <div className="flex flex-col items-center gap-4">
+        <img
+          src={profile}
+          alt="Yousif"
+          className="rounded-full w-28 border-ring border"
+        />
+        <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-l from-primary to-secondary text-center">
+          Yousif M.Helal
+        </h2>
+        <div className="flex gap-4 items-center justify-center mt-3 flex-wrap">
+          <a
+            href="https://my-portfolio-five-lime-57.vercel.app/"
+            aria-label="Portfolio">
+            <img className="icon w-[2rem]" src={logo} alt="Yousif Portfolio" />
+          </a>
+          <a href="https://www.facebook.com/" aria-label="Facebook">
+            <FaFacebook className="icon" style={{ color: "#1877f2" }} />
+          </a>
+          <a href="https://www.instagram.com/" aria-label="Instagram">
+            <FaInstagram className="icon" style={{ color: "#e1306c" }} />
+          </a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+            <FaLinkedinIn className="icon" style={{ color: "#0a66c2" }} />
+          </a>
+          <a
+            href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+            aria-label="Gmail">
+            <SiGmail className="icon" style={{ color: "#ea4335" }} />
+          </a>
+          <a href="https://www.youtube.com/" aria-label="YouTube">
+            <FaYoutube className="icon" style={{ color: "#ff0000" }} />
+          </a>
+          <a href="https://www.twitch.tv/" aria-label="Twitch">
+            <FaTwitch className="icon" style={{ color: "#9146ff" }} />
+          </a>
+          <a href="https://github.com/YousifMHelal" aria-label="GitHub">
+            <FaGithub className="icon" style={{ color: "#f5f5f5" }} />
+          </a>
+          <a href="https://www.upwork.com" aria-label="Upwork">
+            <SiUpwork className="icon" style={{ color: "#73bb44" }} />
+          </a>
+          <a href="https://www.paypal.com/" aria-label="PayPal">
+            <BsPaypal className="icon" style={{ color: "#f5f5f5" }} />
+          </a>
+        </div>
       </div>
-      {/* -----All links----- */}
-      <div className="w-full h-full flex">
-        {/* -----Programming links----- */}
-        <div className="relative left-10 top-5 w-[300px] h-[300px]">
-          <div className="relative w-full h-full left-[-50%] flex justify-center items-center cursor-pointer">
-            <h2 className="absolute left-[74%] text-2xl bg-gradient-to-r from-start-red to-end-red bg-clip-text font-bold heading">
-              Programming
-            </h2>
-            <a
-              className="round"
-              style={{ "--i": "1" }}
-              href="https://stackoverflow.com/"
-            >
-              <FaStackOverflow
-                className="round-icon"
-                style={{ color: "#f48024" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "2" }}
-              href="https://css-tricks.com/"
-            >
-              <DiCssTricks
-                className="round-icon"
-                style={{ color: "#E31B5F" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "3" }}
-              href="https://leetcode.com/"
-            >
-              <SiLeetcode className="round-icon" style={{ color: "#F89F1B" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "4" }}
-              href="https://www.w3schools.com/"
-            >
-              <DiW3C className="round-icon" style={{ color: "#4CAF50" }} />
-            </a>
-            <a className="round" style={{ "--i": "5" }} href="https://dev.to/">
-              <FaDev className="round-icon" style={{ color: "#ffffff" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "6" }}
-              href="https://authn.edx.org/"
-            >
-              <SiEdx className="round-icon" style={{ color: "#1F9FD9" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "7" }}
-              href="https://www.udemy.com/"
-            >
-              <SiUdemy
-                className="icon round-icon"
-                style={{ color: "#BE32F5" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "8" }}
-              href="https://www.freecodecamp.org/"
-            >
-              <FaFreeCodeCamp
-                className="round-icon"
-                style={{ color: "#efefef" }}
-              />
-            </a>
-          </div>
+
+      {/* -----Search and Categories----- */}
+      <div className="flex flex-col mt-10 w-full items-center">
+        <form
+          action="https://www.google.com/search"
+          method="GET"
+          className="w-full max-w-lg">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search on Google..."
+            className="bg-muted self-center w-full border-border border-2 rounded-3xl px-4 py-2 text-muted-foreground"
+            aria-label="Google Search"
+            autoFocus
+            autoComplete="off" // Disable autocomplete
+          />
+        </form>
+
+        {/* -----Categories Section----- */}
+        <div className="flex flex-col md:flex-row items-center justify-between w-full mt-8 gap-8">
+          <CategorySection title="Coding" iconSet="coding" />
+          <CategorySection title="Links" iconSet="links" />
         </div>
-        {/* -----Styles links----- */}
-        <div className="relative left-[20%] bottom-[-150px] w-[300px] h-[300px]">
-          <div className="relative w-full h-full left-[-50%] flex justify-center items-center cursor-pointer">
-            <h2 className="absolute left-[92%] text-2xl bg-gradient-to-r from-start-red to-end-red bg-clip-text font-bold heading">
-              Style
-            </h2>
-            <a
-              className="round"
-              style={{ "--i": "1" }}
-              href="https://www.pinterest.com/"
-            >
-              <FaPinterestP
-                className="round-icon"
-                style={{ color: "#e60023" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "2" }}
-              href="https://dribbble.com/"
-            >
-              <FaDribbble className="round-icon" style={{ color: "#ea4c89" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "3" }}
-              href="https://unsplash.com/"
-            >
-              <SiUnsplash className="round-icon" style={{ color: "#fff" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "4" }}
-              href="https://www.pexels.com/"
-            >
-              <CgPexels className="round-icon" style={{ color: "#07A081" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "5" }}
-              href="https://www.framer.com/motion/"
-            >
-              <TbBrandFramerMotion
-                className="round-icon"
-                style={{ color: "#7C0CFE" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "6" }}
-              href="https://www.wallpaperflare.com/"
-            >
-              <AiFillCamera
-                className="round-icon"
-                style={{ color: "#B21C38" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "7" }}
-              href="https://getwaves.io/"
-            >
-              <GiWaves
-                className="icon round-icon"
-                style={{ color: "#0099FF" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "8" }}
-              href="https://tailwindcomponents.com/cheatsheet/"
-            >
-              <SiTailwindcss
-                className="round-icon"
-                style={{ color: "#0ED3CF" }}
-              />
-            </a>
-          </div>
-        </div>
-        <div className="relative right-[-38%] top-5 w-[300px] h-[300px]">
-          <div className="relative w-full h-full left-[-50%] flex justify-center items-center cursor-pointer">
-            <h2 className="absolute left-[92%] text-2xl bg-gradient-to-r from-start-red to-end-red bg-clip-text font-bold heading">
-              Links
-            </h2>
-            <a
-              className="round"
-              style={{ "--i": "1" }}
-              href="https://www.ted.com/"
-            >
-              <TbBrandTed className="round-icon" style={{ color: "#E40027" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "2" }}
-              href="https://www.busuu.com/"
-            >
-              <RiEnglishInput
-                className="round-icon"
-                style={{ color: "#0160ED" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "3" }}
-              href="https://monkeytype.com/"
-            >
-              <GiMonkey className="round-icon" style={{ color: "#E2B714" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "4" }}
-              href="https://dictionary.cambridge.org/"
-            >
-              <TbBooksOff className="round-icon" style={{ color: "#00248B" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "5" }}
-              href="https://codepen.io/"
-            >
-              <FiCodepen className="round-icon" style={{ color: "#0ebeff" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "6" }}
-              href="https://www.tiktok.com/"
-            >
-              <FaTiktok className="round-icon" style={{ color: "#fff" }} />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "7" }}
-              href="https://www.amazon.eg/"
-            >
-              <SiAmazon
-                className="icon round-icon"
-                style={{ color: "#ff9900" }}
-              />
-            </a>
-            <a
-              className="round"
-              style={{ "--i": "8" }}
-              href="https://playvalorant.com/ar-ae/"
-            >
-              <SiValorant className="round-icon" style={{ color: "#FF4655" }} />
-            </a>
-          </div>
+
+        {/* -----Style Section----- */}
+        <div className="flex flex-col items-center w-full mt-16">
+          <CategorySection title="Style" iconSet="style" />
         </div>
       </div>
     </div>
   );
 }
+
+const CategorySection = ({ title, iconSet }) => {
+  const icons = {
+    coding: [
+      {
+        icon: <img src={gpt} alt="ChatGPT" />,
+        link: "https://chatgpt.com/",
+      },
+      {
+        icon: <img src={shadcn} alt="Shadcn UI" className="w-8 rounded-md" />,
+        link: "https://ui.shadcn.com/",
+      },
+      {
+        icon: <FaStackOverflow style={{ color: "#f48024" }} />,
+        link: "https://stackoverflow.com/",
+      },
+      {
+        icon: <SiNextdotjs style={{ color: "#ffffff" }} />,
+        link: "https://nextjs.org/",
+      },
+      {
+        icon: <FaDev style={{ color: "#ddd" }} />,
+        link: "https://dev.to/",
+      },
+      {
+        icon: <MdDraw style={{ color: "#5b57d1" }} />,
+        link: "https://excalidraw.com/",
+      },
+    ],
+    style: [
+      {
+        icon: <SiUnsplash style={{ color: "#ffffff" }} />,
+        link: "https://unsplash.com/",
+      },
+      {
+        icon: <CgPexels style={{ color: "#07a081" }} />,
+        link: "https://www.pexels.com/",
+      },
+      {
+        icon: <FaFire style={{ color: "#eb0074" }} />,
+        link: "https://www.wallpaperflare.com/",
+      },
+      {
+        icon: <FaDribbble style={{ color: "#e60023" }} />,
+        link: "https://dribbble.com/",
+      },
+      {
+        icon: <FaPinterestP style={{ color: "#bd081c" }} />,
+        link: "https://www.pinterest.com/",
+      },
+      {
+        icon: <SiTailwindcss style={{ color: "#38b2ac" }} />,
+        link: "https://tailwindcomponents.com/cheatsheet/",
+      },
+    ],
+    links: [
+      {
+        icon: <img src={busuu} alt="Busuu" className="w-8" />,
+        link: "https://www.busuu.com/dashboard/timeline",
+      },
+      {
+        icon: <FaTiktok style={{ color: "#ffffff" }} />,
+        link: "https://www.tiktok.com/",
+      },
+      {
+        icon: <GiMonkey style={{ color: "#e2b714" }} />,
+        link: "https://monkeytype.com/",
+      },
+      {
+        icon: <SiValorant style={{ color: "#ff4655" }} />,
+        link: "https://playvalorant.com/ar-ae/",
+      },
+      {
+        icon: <TbBrandTed style={{ color: "#e40027" }} />,
+        link: "https://www.ted.com/",
+      },
+    ],
+  };
+
+  return (
+    <div className="flex flex-col items-center w-full max-w-xs">
+      <h3 className="text-secondary-foreground text-2xl font-semibold text-center mb-5">
+        {title}
+      </h3>
+      <div className="flex gap-4 items-center justify-center flex-wrap">
+        {icons[iconSet].map((item, index) => (
+          <a href={item.link} key={index} className="icon" aria-label={title}>
+            {item.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default App;

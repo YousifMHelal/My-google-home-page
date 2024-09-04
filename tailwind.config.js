@@ -4,22 +4,41 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        //-----Dark mode colors-----
-        'dark': '#000',
-        'dark-h': '#e9e9e9',
-        'dark-p': '#a0a0a0',
-        'dark-p1': '#111',
-        'dark-p3': '#333',
-        'dark-p2': '#888',
-
-        //-----Main colors-----
-        'start-blue': '#007CF0',
-        'start-red': '#7928CA',
-        'end-blue': '#00DFD8',
-        'end-red': '#FF0080',
-      }
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
     },
   },
   plugins: [],
-}
-
+};
