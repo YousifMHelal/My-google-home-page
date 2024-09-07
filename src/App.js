@@ -14,22 +14,21 @@ import {
   FaTwitch,
   FaYoutube,
 } from "react-icons/fa";
-import { MdDraw } from "react-icons/md";
-import { SiNextdotjs } from "react-icons/si";
 import { GiMonkey } from "react-icons/gi";
+import { IoLogoVercel } from "react-icons/io5";
+import { MdDraw } from "react-icons/md";
 import {
-  SiGmail,
-  SiTailwindcss,
+  SiGmail, SiNextdotjs, SiTailwindcss,
   SiUnsplash,
   SiUpwork,
-  SiValorant,
+  SiValorant
 } from "react-icons/si";
 import { TbBrandTed } from "react-icons/tb";
-import logo from "./Logo.png";
-import shadcn from "./shadcn.png";
 import busuu from "./busuu.png";
 import gpt from "./gpt.svg";
+import logo from "./Logo.png";
 import profile from "./profile.png";
+import shadcn from "./shadcn.png";
 
 function App() {
   return (
@@ -45,9 +44,7 @@ function App() {
           Yousif M.Helal
         </h2>
         <div className="flex gap-4 items-center justify-center mt-3 flex-wrap">
-          <a
-            href="https://my-portfolio-five-lime-57.vercel.app/"
-            aria-label="Portfolio">
+          <a href="https://yousifmamdouh.online/" aria-label="Portfolio">
             <img className="icon w-[2rem]" src={logo} alt="Yousif Portfolio" />
           </a>
           <a href="https://www.facebook.com/" aria-label="Facebook">
@@ -132,6 +129,10 @@ const CategorySection = ({ title, iconSet }) => {
       {
         icon: <SiNextdotjs style={{ color: "#ffffff" }} />,
         link: "https://nextjs.org/",
+      },
+      {
+        icon: <IoLogoVercel style={{ color: "#f0f0f0" }} />,
+        link: "https://vercel.com/yousif-mamdouhs-projects",
       },
       {
         icon: <FaDev style={{ color: "#ddd" }} />,
