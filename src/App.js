@@ -89,7 +89,7 @@ function App() {
             type="text"
             name="q"
             placeholder="Search on Google..."
-            className="bg-muted self-center w-full border-border border-2 rounded-3xl px-4 py-2 text-muted-foreground"
+            className="bg-muted self-center w-full border-border border-2 rounded-3xl px-4 py-2 text-muted-foreground focus:border-none focus:ring-0"
             aria-label="Google Search"
             autoFocus
             autoComplete="off" // Disable autocomplete
