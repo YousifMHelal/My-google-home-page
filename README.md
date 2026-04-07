@@ -54,7 +54,7 @@ A beautiful, modern personal homepage built with React and Tailwind CSS. This pr
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone: https://github.com/YousifMHelal/My-google-home-page.git
    cd My-google-home-page
    ```
 
