@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/My-google-home-page/static/css/main.0e4bf8a0.css",
-    "main.js": "/My-google-home-page/static/js/main.4d726b41.js",
-    "static/media/profile.png": "/My-google-home-page/static/media/profile.7bbc3b5ecb81ea131be4.png",
+    "main.css": "/My-google-home-page/static/css/main.0d4a6837.css",
+    "main.js": "/My-google-home-page/static/js/main.e737cc22.js",
+    "static/media/profile.jpeg": "/My-google-home-page/static/media/profile.b1675725d757fb56e4f9.jpeg",
     "static/media/busuu.png": "/My-google-home-page/static/media/busuu.d8e182dda270dc636a4c.png",
-    "static/media/gpt.svg": "/My-google-home-page/static/media/gpt.3a08abead278fe1f8ad8e47e9bd1091b.svg",
+    "static/media/gpt.svg": "/My-google-home-page/static/media/gpt.abd9ab14e5ebd4afd33085f1fc81ecd7.svg",
     "index.html": "/My-google-home-page/index.html",
-    "main.0e4bf8a0.css.map": "/My-google-home-page/static/css/main.0e4bf8a0.css.map",
-    "main.4d726b41.js.map": "/My-google-home-page/static/js/main.4d726b41.js.map"
+    "main.0d4a6837.css.map": "/My-google-home-page/static/css/main.0d4a6837.css.map",
+    "main.e737cc22.js.map": "/My-google-home-page/static/js/main.e737cc22.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e4bf8a0.css",
-    "static/js/main.4d726b41.js"
+    "static/css/main.0d4a6837.css",
+    "static/js/main.e737cc22.js"
   ]
 }
