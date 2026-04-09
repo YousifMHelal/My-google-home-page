@@ -22,7 +22,7 @@ import {
 } from "react-icons/fa";
 import { GiMonkey } from "react-icons/gi";
 import { IoLogoVercel } from "react-icons/io5";
-import { MdDraw } from "react-icons/md";
+import { MdDraw, MdGTranslate } from "react-icons/md";
 import { TbBrandTed } from "react-icons/tb";
 import {
   SiGmail,
@@ -56,14 +56,12 @@ function App() {
             <a
               href="https://www.yousifmamdouh.tech/"
               aria-label="Portfolio"
-              target="_blank"
               rel="noreferrer">
               <FaCode className="icon top-icon" style={{ color: "#00a7ff" }} />
             </a>
             <a
               href="https://www.facebook.com/"
               aria-label="Facebook"
-              target="_blank"
               rel="noreferrer">
               <FaFacebook
                 className="icon top-icon"
@@ -73,7 +71,6 @@ function App() {
             <a
               href="https://www.instagram.com/"
               aria-label="Instagram"
-              target="_blank"
               rel="noreferrer">
               <FaInstagram
                 className="icon top-icon"
@@ -83,7 +80,6 @@ function App() {
             <a
               href="https://www.linkedin.com/"
               aria-label="LinkedIn"
-              target="_blank"
               rel="noreferrer">
               <FaLinkedinIn
                 className="icon top-icon"
@@ -93,14 +89,12 @@ function App() {
             <a
               href="https://mail.google.com/mail/u/0/#inbox"
               aria-label="Gmail"
-              target="_blank"
               rel="noreferrer">
               <SiGmail className="icon top-icon" style={{ color: "#ea4335" }} />
             </a>
             <a
               href="https://www.youtube.com/"
               aria-label="YouTube"
-              target="_blank"
               rel="noreferrer">
               <FaYoutube
                 className="icon top-icon"
@@ -110,7 +104,6 @@ function App() {
             <a
               href="https://www.twitch.tv/"
               aria-label="Twitch"
-              target="_blank"
               rel="noreferrer">
               <FaTwitch
                 className="icon top-icon"
@@ -120,7 +113,6 @@ function App() {
             <a
               href="https://github.com/YousifMHelal"
               aria-label="GitHub"
-              target="_blank"
               rel="noreferrer">
               <FaGithub
                 className="icon top-icon"
@@ -130,7 +122,6 @@ function App() {
             <a
               href="https://www.upwork.com/"
               aria-label="Upwork"
-              target="_blank"
               rel="noreferrer">
               <SiUpwork
                 className="icon top-icon"
@@ -140,7 +131,6 @@ function App() {
             <a
               href="https://www.paypal.com/"
               aria-label="PayPal"
-              target="_blank"
               rel="noreferrer">
               <BsPaypal
                 className="icon top-icon"
@@ -326,6 +316,11 @@ const CategorySection = ({ title, iconSet }) => {
         link: "https://www.notion.so/",
         label: "Notion",
       },
+      {
+        icon: <MdGTranslate style={{ color: "#8ab4f8" }} />,
+        link: "https://translate.google.com/",
+        label: "Google Translate",
+      },
     ],
     style: [
       {
@@ -372,7 +367,6 @@ const CategorySection = ({ title, iconSet }) => {
             className="icon"
             aria-label={item.label || title}
             title={item.label || title}
-            target="_blank"
             rel="noreferrer">
             {item.icon}
           </a>
