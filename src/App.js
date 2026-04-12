@@ -6,6 +6,8 @@ import {
   FaDev,
   FaDribbble,
   FaFacebook,
+  FaDatabase,
+  FaEraser,
   FaGlobe,
   FaGithub,
   FaInstagram,
@@ -27,6 +29,7 @@ import { TbBrandTed } from "react-icons/tb";
 import {
   SiGmail,
   SiHackerone,
+  SiHaveibeenpwned,
   SiLeetcode,
   SiNotion,
   SiGooglebard,
@@ -35,6 +38,7 @@ import {
   SiTailwindcss,
   SiUnsplash,
   SiTryhackme,
+  SiVirustotal,
   SiUpwork,
   SiValorant,
 } from "react-icons/si";
@@ -213,6 +217,11 @@ const CategorySection = ({ title, iconSet }) => {
         label: "Excalidraw",
       },
       {
+        icon: <FaEraser style={{ color: "#f5f5f5" }} />,
+        link: "https://eraser.io/",
+        label: "Eraser",
+      },
+      {
         icon: <SiTailwindcss style={{ color: "#00d4ff" }} />,
         link: "https://tailwindcss.com/docs",
         label: "Tailwind Docs",
@@ -265,17 +274,27 @@ const CategorySection = ({ title, iconSet }) => {
         label: "NVD",
       },
       {
+        icon: <SiVirustotal style={{ color: "#67e8f9" }} />,
+        link: "https://www.virustotal.com/",
+        label: "VirusTotal",
+      },
+      {
+        icon: <SiHaveibeenpwned style={{ color: "#f59e0b" }} />,
+        link: "https://haveibeenpwned.com/",
+        label: "Have I Been Pwned",
+      },
+      {
         icon: <SiHackerone style={{ color: "#ffffff" }} />,
         link: "https://hackerone.com/hacktivity",
         label: "HackerOne Hacktivity",
       },
       {
-        icon: <FaBug style={{ color: "#c7ff93" }} />,
+        icon: <FaDatabase style={{ color: "#c7ff93" }} />,
         link: "https://www.cvedetails.com/",
         label: "CVE Details",
       },
       {
-        icon: <FaTerminal style={{ color: "#9ddcff" }} />,
+        icon: <FaCode style={{ color: "#9ddcff" }} />,
         link: "https://www.exploit-db.com/",
         label: "Exploit DB",
       },
