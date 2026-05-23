@@ -263,7 +263,7 @@ function App() {
 const TopLink = ({ href, icon, hoverColor }) => (
   <a
     href={href}
-    target="_blank"
+
     rel="noreferrer"
     className={`flex items-center justify-center w-11 h-11 bg-[#0a0a0f] border border-slate-800 text-slate-400 rounded-lg transition-all duration-300 hover:-translate-y-1 ${hoverColor}`}>
     <div className="text-xl">{icon}</div>
@@ -526,7 +526,7 @@ const CategorySection = ({ title, iconSet, theme }) => {
           <a
             href={item.link}
             key={index}
-            target="_blank"
+
             rel="noreferrer"
             className="flex flex-col items-center gap-2 group/icon outline-none"
             aria-label={item.label}>

@@ -143,7 +143,7 @@ The `npm run build` command creates a production-ready build in the `build/` fol
 
 ## 📝 Notes
 
-- All external links open in new tabs with `target="_blank"`
+- All external links open in new tabs with ``
 - The search bar is auto-focused for quick searching
 - Icons are fetched from various icon libraries via react-icons
 - Images (profile, logos) are imported locally for better performance
