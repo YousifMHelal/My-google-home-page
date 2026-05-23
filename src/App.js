@@ -1,393 +1,543 @@
-import { CgPexels } from "react-icons/cg";
-import { BsPaypal } from "react-icons/bs";
+import { useEffect, useRef } from "react";
 import {
+  FaBookReader,
   FaBug,
   FaCode,
+  FaDatabase,
   FaDev,
   FaDribbble,
-  FaFacebook,
-  FaDatabase,
   FaEraser,
-  FaGlobe,
+  FaFacebook,
+  FaGhost,
   FaGithub,
+  FaGlobe,
   FaInstagram,
+  FaLayerGroup,
   FaLinkedinIn,
   FaLock,
+  FaNetworkWired,
   FaRobot,
-  FaPenNib,
-  FaPinterestP,
   FaShieldAlt,
-  FaTiktok,
+  FaSkull,
   FaTerminal,
+  FaTools,
   FaTwitch,
+  FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
 import { GiMonkey } from "react-icons/gi";
 import { IoLogoVercel } from "react-icons/io5";
 import { MdDraw, MdGTranslate } from "react-icons/md";
-import { TbBrandTed } from "react-icons/tb";
 import {
+  SiDiscord,
+  SiDocker,
+  SiFigma,
   SiGmail,
+  SiGnubash,
+  SiGooglebard,
   SiHackerone,
   SiHaveibeenpwned,
+  SiKalilinux,
   SiLeetcode,
-  SiNotion,
-  SiGooglebard,
   SiNextdotjs,
-  SiCanva,
+  SiNotion,
+  SiOpenai,
+  SiPython,
+  SiReddit,
+  SiSpotify,
+  SiStackoverflow,
   SiTailwindcss,
-  SiUnsplash,
+  SiTorbrowser,
   SiTryhackme,
-  SiVirustotal,
   SiUpwork,
   SiValorant,
+  SiVirustotal,
+  SiWireshark,
+  SiX,
 } from "react-icons/si";
-import busuu from "./busuu.png";
-import gpt from "./gpt.svg";
+import { TbBrandTed } from "react-icons/tb";
+
+// Keep profile image, removed failing local imports
 import profile from "./profile.jpeg";
-import shadcn from "./shadcn.png";
 
 function App() {
+  const searchInputRef = useRef(null);
+
+  // Keyboard shortcut to focus search bar
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // If user presses "/" and the active element is NOT an input or textarea
+      if (
+        e.key === "/" &&
+        document.activeElement.tagName !== "INPUT" &&
+        document.activeElement.tagName !== "TEXTAREA"
+      ) {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
-    <>
-      <div className="bg-orb bg-orb-left" />
-      <div className="bg-orb bg-orb-right" />
-      <main className="app-shell">
-        <section className="profile-wrap">
-          <img src={profile} alt="Yousif" className="profile-image" />
-          <h1 className="profile-title">Yousif M.Helal</h1>
-          <div className="top-links">
-            <a
-              href="https://www.yousifmamdouh.tech/"
-              aria-label="Portfolio"
-              rel="noreferrer">
-              <FaCode className="icon top-icon" style={{ color: "#00a7ff" }} />
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              aria-label="Facebook"
-              rel="noreferrer">
-              <FaFacebook
-                className="icon top-icon"
-                style={{ color: "#1877f2" }}
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              aria-label="Instagram"
-              rel="noreferrer">
-              <FaInstagram
-                className="icon top-icon"
-                style={{ color: "#e1306c" }}
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/"
-              aria-label="LinkedIn"
-              rel="noreferrer">
-              <FaLinkedinIn
-                className="icon top-icon"
-                style={{ color: "#0a66c2" }}
-              />
-            </a>
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox"
-              aria-label="Gmail"
-              rel="noreferrer">
-              <SiGmail className="icon top-icon" style={{ color: "#ea4335" }} />
-            </a>
-            <a
-              href="https://www.youtube.com/"
-              aria-label="YouTube"
-              rel="noreferrer">
-              <FaYoutube
-                className="icon top-icon"
-                style={{ color: "#ff0000" }}
-              />
-            </a>
-            <a
-              href="https://www.twitch.tv/"
-              aria-label="Twitch"
-              rel="noreferrer">
-              <FaTwitch
-                className="icon top-icon"
-                style={{ color: "#9146ff" }}
-              />
-            </a>
-            <a
-              href="https://github.com/YousifMHelal"
-              aria-label="GitHub"
-              rel="noreferrer">
-              <FaGithub
-                className="icon top-icon"
-                style={{ color: "#f5f5f5" }}
-              />
-            </a>
-            <a
-              href="https://www.upwork.com/"
-              aria-label="Upwork"
-              rel="noreferrer">
-              <SiUpwork
-                className="icon top-icon"
-                style={{ color: "#73bb44" }}
-              />
-            </a>
-            <a
-              href="https://www.paypal.com/"
-              aria-label="PayPal"
-              rel="noreferrer">
-              <BsPaypal
-                className="icon top-icon"
-                style={{ color: "#f5f5f5" }}
-              />
-            </a>
-          </div>
-        </section>
+    <div className="min-h-screen bg-[#050509] text-slate-300 font-mono relative overflow-hidden selection:bg-fuchsia-500 selection:text-white">
+      {/* Cyberpunk Grid Background */}
+      <div className="pointer-events-none fixed inset-0 z-0 h-full w-full bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
-        <section className="search-wrap">
-          <form
-            action="https://www.google.com/search"
-            method="GET"
-            className="search-form">
-            <input
-              type="text"
-              name="q"
-              placeholder="Search on Google..."
-              className="search-input"
-              aria-label="Google Search"
-              autoFocus
-              autoComplete="off"
+      {/* Glowing Orbs */}
+      <div className="fixed top-[-10%] left-[-10%] w-96 h-96 bg-cyan-600/20 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="fixed bottom-[-10%] right-[-10%] w-96 h-96 bg-fuchsia-600/20 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <main className="max-w-7xl mx-auto px-4 py-8 md:py-12 flex flex-col items-center relative z-10">
+        {/* Terminal Header */}
+        <div className="w-full max-w-4xl flex justify-between items-center border-b border-slate-800 pb-2 mb-8 text-xs sm:text-sm">
+          <span className="text-cyan-400">
+            root@yousif-sys<span className="text-fuchsia-500">:~#</span>{" "}
+            ./start_dashboard.sh
+          </span>
+          <span className="text-emerald-400 animate-pulse">
+            [SYSTEM ONLINE]
+          </span>
+        </div>
+
+        {/* Dossier / Profile Section */}
+        <section className="w-full max-w-4xl flex flex-col md:flex-row items-center md:items-start gap-8 mb-12 animate-fade-in">
+          <div className="relative group p-1 bg-[#09090b] shadow-[0_0_25px_rgba(192,38,211,0.3)] rounded-lg transition-all duration-500 hover:shadow-[0_0_35px_rgba(34,211,238,0.4)]">
+            {/* Neon Borders */}
+            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyan-400 rounded-tl-lg"></div>
+            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-fuchsia-500 rounded-tr-lg"></div>
+            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-emerald-400 rounded-bl-lg"></div>
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-rose-500 rounded-br-lg"></div>
+
+            <img
+              src={profile}
+              alt="Yousif"
+              className="w-32 h-32 object-cover rounded-md grayscale group-hover:grayscale-0 transition-all duration-500"
+              onError={(e) => {
+                e.target.src = "https://via.placeholder.com/150";
+              }} // Fallback if local image missing
             />
-          </form>
-          <p className="search-subtitle">
-            Fast access to your daily tools, learning, and security links.
-          </p>
+          </div>
+
+          <div className="flex-1 flex flex-col items-center md:items-start">
+            <h1 className="text-3xl md:text-4xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-purple-500 mb-2 drop-shadow-[0_0_10px_rgba(192,38,211,0.5)]">
+              YOUSIF M. HELAL
+            </h1>
+            <p className="text-slate-400 text-sm mb-6 uppercase tracking-widest">
+              &gt; <span className="text-cyan-400">Full_Stack_Developer</span>{" "}
+              //{" "}
+              <span className="text-rose-500">
+                Cyber_Security_Enthusiast
+              </span>
+            </p>
+
+            {/* Top Quick Links */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-3">
+              <TopLink
+                href="https://www.yousifmamdouh.tech/"
+                icon={<FaCode />}
+                hoverColor="hover:text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)]"
+              />
+              <TopLink
+                href="https://www.facebook.com/"
+                icon={<FaFacebook />}
+                hoverColor="hover:text-blue-600 hover:border-blue-600 hover:shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+              />
+              <TopLink
+                href="https://www.instagram.com/"
+                icon={<FaInstagram />}
+                hoverColor="hover:text-pink-500 hover:border-pink-500 hover:shadow-[0_0_15px_rgba(236,72,153,0.5)]"
+              />
+              <TopLink
+                href="https://github.com/YousifMHelal"
+                icon={<FaGithub />}
+                hoverColor="hover:text-white hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+              />
+              <TopLink
+                href="https://www.linkedin.com/"
+                icon={<FaLinkedinIn />}
+                hoverColor="hover:text-blue-500 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+              />
+              <TopLink
+                href="https://www.youtube.com/"
+                icon={<FaYoutube />}
+                hoverColor="hover:text-red-600 hover:border-red-600 hover:shadow-[0_0_15px_rgba(220,38,38,0.5)]"
+              />
+              <TopLink
+                href="https://www.twitch.tv/"
+                icon={<FaTwitch />}
+                hoverColor="hover:text-purple-500 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]"
+              />
+              <TopLink
+                href="https://discord.com/app"
+                icon={<SiDiscord />}
+                hoverColor="hover:text-indigo-400 hover:border-indigo-400 hover:shadow-[0_0_15px_rgba(129,140,248,0.5)]"
+              />
+              <TopLink
+                href="https://web.whatsapp.com/"
+                icon={<FaWhatsapp />}
+                hoverColor="hover:text-green-500 hover:border-green-500 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]"
+              />
+              <TopLink
+                href="https://twitter.com/"
+                icon={<SiX />}
+                hoverColor="hover:text-slate-300 hover:border-slate-300 hover:shadow-[0_0_15px_rgba(203,213,225,0.5)]"
+              />
+              <TopLink
+                href="https://mail.google.com/mail/u/0/#inbox"
+                icon={<SiGmail />}
+                hoverColor="hover:text-red-500 hover:border-red-500 hover:shadow-[0_0_15px_rgba(239,68,68,0.5)]"
+              />
+              <TopLink
+                href="https://www.upwork.com/"
+                icon={<SiUpwork />}
+                hoverColor="hover:text-emerald-500 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+              />
+            </div>
+          </div>
         </section>
 
-        <section className="categories-grid">
-          <div className="category-card">
-            <CategorySection title="Coding" iconSet="coding" />
+        {/* Command Line Search */}
+        <section className="w-full max-w-4xl mb-16 relative">
+          <div className="absolute -top-3 right-4 bg-[#050509] px-2 text-[10px] text-slate-500 border border-slate-800 rounded z-10">
+            Press <kbd className="text-fuchsia-400 font-bold">/</kbd> to search
           </div>
-          <div className="category-card">
-            <CategorySection title="Security" iconSet="security" />
+          <div className="bg-[#09090b]/80 backdrop-blur-md border border-slate-800 rounded-lg p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)] focus-within:shadow-[0_0_30px_rgba(192,38,211,0.2)] focus-within:border-fuchsia-500/50 transition-all duration-300 relative overflow-hidden group">
+            {/* Search Bar Glow Effect */}
+            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent scale-x-0 group-focus-within:scale-x-100 transition-transform duration-500"></div>
+
+            <form
+              action="https://www.google.com/search"
+              method="GET"
+              className="flex items-center gap-3">
+              <span className="text-fuchsia-500 font-bold hidden sm:inline">
+                yousif@sys:~$
+              </span>
+              <span className="text-fuchsia-500 font-bold sm:hidden">~$</span>
+              <input
+                ref={searchInputRef}
+                type="text"
+                name="q"
+                placeholder="execute query..."
+                className="w-full bg-transparent border-none text-slate-200 placeholder-slate-600 focus:outline-none text-lg"
+                autoFocus
+                autoComplete="off"
+              />
+              <span className="animate-pulse w-2 h-5 bg-cyan-400 inline-block"></span>
+            </form>
           </div>
-          <div className="category-card">
-            <CategorySection title="Personal" iconSet="personal" />
-          </div>
-          <div className="category-card">
-            <CategorySection title="Style" iconSet="style" />
-          </div>
+        </section>
+
+        {/* Main Database Grid */}
+        <section className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <CategorySection
+            title="0x01_DEVELOPMENT"
+            iconSet="coding"
+            theme="cyan"
+          />
+          <CategorySection
+            title="0x02_OFFENSIVE_SEC"
+            iconSet="security"
+            theme="rose"
+          />
+          <CategorySection
+            title="0x03_OSINT_&_TOOLS"
+            iconSet="osint"
+            theme="purple"
+          />
+          <CategorySection
+            title="0x04_PERSONAL_SYS"
+            iconSet="personal"
+            theme="emerald"
+          />
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
-const CategorySection = ({ title, iconSet }) => {
+/* Sub-Components */
+
+const TopLink = ({ href, icon, hoverColor }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    className={`flex items-center justify-center w-11 h-11 bg-[#0a0a0f] border border-slate-800 text-slate-400 rounded-lg transition-all duration-300 hover:-translate-y-1 ${hoverColor}`}>
+    <div className="text-xl">{icon}</div>
+  </a>
+);
+
+const CategorySection = ({ title, iconSet, theme }) => {
+  // Map themes to neon colors
+  const themes = {
+    cyan: {
+      text: "text-cyan-400",
+      border: "border-cyan-500/30",
+      hoverBorder: "hover:border-cyan-400",
+      glow: "hover:shadow-[0_0_25px_rgba(34,211,238,0.15)]",
+      iconHover:
+        "group-hover/icon:text-cyan-400 group-hover/icon:border-cyan-400 group-hover/icon:bg-cyan-400/10",
+      corner: "border-cyan-500",
+    },
+    rose: {
+      text: "text-rose-500",
+      border: "border-rose-500/30",
+      hoverBorder: "hover:border-rose-400",
+      glow: "hover:shadow-[0_0_25px_rgba(244,63,94,0.15)]",
+      iconHover:
+        "group-hover/icon:text-rose-400 group-hover/icon:border-rose-400 group-hover/icon:bg-rose-400/10",
+      corner: "border-rose-500",
+    },
+    purple: {
+      text: "text-purple-400",
+      border: "border-purple-500/30",
+      hoverBorder: "hover:border-purple-400",
+      glow: "hover:shadow-[0_0_25px_rgba(192,38,211,0.15)]",
+      iconHover:
+        "group-hover/icon:text-purple-400 group-hover/icon:border-purple-400 group-hover/icon:bg-purple-400/10",
+      corner: "border-purple-500",
+    },
+    emerald: {
+      text: "text-emerald-400",
+      border: "border-emerald-500/30",
+      hoverBorder: "hover:border-emerald-400",
+      glow: "hover:shadow-[0_0_25px_rgba(52,211,153,0.15)]",
+      iconHover:
+        "group-hover/icon:text-emerald-400 group-hover/icon:border-emerald-400 group-hover/icon:bg-emerald-400/10",
+      corner: "border-emerald-500",
+    },
+  };
+
+  const t = themes[theme];
+
   const icons = {
     coding: [
+      { icon: <SiOpenai />, link: "https://chatgpt.com/", label: "ChatGPT" },
+      { icon: <FaRobot />, link: "https://claude.ai/", label: "Claude_AI" },
       {
-        icon: <img src={gpt} alt="ChatGPT" />,
-        link: "https://chatgpt.com/",
-        label: "ChatGPT",
-      },
-      {
-        icon: <img src={shadcn} alt="Shadcn UI" className="w-8 rounded-md" />,
-        link: "https://ui.shadcn.com/",
-        label: "shadcn/ui",
-      },
-      {
-        icon: <SiNextdotjs style={{ color: "#ffffff" }} />,
-        link: "https://nextjs.org/",
-        label: "Next.js",
-      },
-      {
-        icon: <IoLogoVercel style={{ color: "#f0f0f0" }} />,
-        link: "https://vercel.com/yousif-mamdouhs-projects",
-        label: "Vercel",
-      },
-      {
-        icon: <FaDev style={{ color: "#ddd" }} />,
-        link: "https://dev.to/",
-        label: "DEV",
-      },
-      {
-        icon: <MdDraw style={{ color: "#5b57d1" }} />,
-        link: "https://excalidraw.com/",
-        label: "Excalidraw",
-      },
-      {
-        icon: <FaEraser style={{ color: "#f5f5f5" }} />,
-        link: "https://eraser.io/",
-        label: "Eraser",
-      },
-      {
-        icon: <SiTailwindcss style={{ color: "#00d4ff" }} />,
-        link: "https://tailwindcss.com/docs",
-        label: "Tailwind Docs",
-      },
-      {
-        icon: <FaRobot style={{ color: "#00d4ff" }} />,
-        link: "https://claude.ai/",
-        label: "Claude Code",
-      },
-      {
-        icon: <SiGooglebard style={{ color: "#ffffff" }} />,
+        icon: <SiGooglebard />,
         link: "https://gemini.google.com/",
         label: "Gemini",
       },
+      { icon: <SiNextdotjs />, link: "https://nextjs.org/", label: "Next.js" },
       {
-        icon: <SiLeetcode style={{ color: "#ffa116" }} />,
+        icon: <FaLayerGroup />,
+        link: "https://ui.shadcn.com/",
+        label: "shadcn/ui",
+      },
+      { icon: <IoLogoVercel />, link: "https://vercel.com/", label: "Vercel" },
+      {
+        icon: <SiTailwindcss />,
+        link: "https://tailwindcss.com/docs",
+        label: "Tailwind",
+      },
+      { icon: <SiDocker />, link: "https://www.docker.com/", label: "Docker" },
+      { icon: <SiPython />, link: "https://www.python.org/", label: "Python" },
+      {
+        icon: <SiStackoverflow />,
+        link: "https://stackoverflow.com/",
+        label: "Stack_Overflow",
+      },
+      { icon: <FaDev />, link: "https://dev.to/", label: "DEV_Community" },
+      {
+        icon: <SiLeetcode />,
         link: "https://leetcode.com/",
         label: "LeetCode",
       },
     ],
     security: [
       {
-        icon: <SiTryhackme style={{ color: "#ff4c4c" }} />,
+        icon: <SiKalilinux />,
+        link: "https://www.kali.org/docs/",
+        label: "Kali_Docs",
+      },
+      {
+        icon: <SiTryhackme />,
         link: "https://tryhackme.com/",
         label: "TryHackMe",
       },
       {
-        icon: <FaShieldAlt style={{ color: "#00d4ff" }} />,
+        icon: <FaShieldAlt />,
         link: "https://www.hackthebox.com/",
-        label: "Hack The Box",
+        label: "HackTheBox",
       },
       {
-        icon: <FaLock style={{ color: "#ff8c42" }} />,
+        icon: <FaLock />,
         link: "https://portswigger.net/web-security",
-        label: "PortSwigger Academy",
+        label: "PortSwigger",
       },
       {
-        icon: <FaBug style={{ color: "#9fd87d" }} />,
+        icon: <FaBug />,
         link: "https://owasp.org/www-project-top-ten/",
-        label: "OWASP Top 10",
+        label: "OWASP_Top_10",
       },
       {
-        icon: <FaTerminal style={{ color: "#76c6ff" }} />,
-        link: "https://ctftime.org/",
-        label: "CTFtime",
+        icon: <FaSkull />,
+        link: "https://www.hackthissite.org/",
+        label: "HackThisSite",
+      },
+      { icon: <FaTerminal />, link: "https://ctftime.org/", label: "CTFtime" },
+      {
+        icon: <FaDatabase />,
+        link: "https://www.cvedetails.com/",
+        label: "CVE_Details",
       },
       {
-        icon: <FaGlobe style={{ color: "#b7c7ff" }} />,
+        icon: <FaCode />,
+        link: "https://www.exploit-db.com/",
+        label: "Exploit_DB",
+      },
+      {
+        icon: <SiHackerone />,
+        link: "https://hackerone.com/hacktivity",
+        label: "HackerOne",
+      },
+      {
+        icon: <FaGlobe />,
         link: "https://nvd.nist.gov/",
-        label: "NVD",
+        label: "NVD_Registry",
       },
       {
-        icon: <SiVirustotal style={{ color: "#67e8f9" }} />,
+        icon: <SiGnubash />,
+        link: "https://gtfobins.github.io/",
+        label: "GTFOBins",
+      },
+    ],
+    osint: [
+      {
+        icon: <FaNetworkWired />,
+        link: "https://www.shodan.io/",
+        label: "Shodan",
+      },
+      {
+        icon: <FaTools />,
+        link: "https://gchq.github.io/CyberChef/",
+        label: "CyberChef",
+      },
+      {
+        icon: <SiVirustotal />,
         link: "https://www.virustotal.com/",
         label: "VirusTotal",
       },
       {
-        icon: <SiHaveibeenpwned style={{ color: "#f59e0b" }} />,
+        icon: <SiHaveibeenpwned />,
         link: "https://haveibeenpwned.com/",
-        label: "Have I Been Pwned",
+        label: "Pwned_Check",
       },
       {
-        icon: <SiHackerone style={{ color: "#ffffff" }} />,
-        link: "https://hackerone.com/hacktivity",
-        label: "HackerOne Hacktivity",
+        icon: <FaGhost />,
+        link: "https://osintframework.com/",
+        label: "OSINT_Frame",
       },
       {
-        icon: <FaDatabase style={{ color: "#c7ff93" }} />,
-        link: "https://www.cvedetails.com/",
-        label: "CVE Details",
+        icon: <SiWireshark />,
+        link: "https://www.wireshark.org/docs/",
+        label: "Wireshark",
       },
       {
-        icon: <FaCode style={{ color: "#9ddcff" }} />,
-        link: "https://www.exploit-db.com/",
-        label: "Exploit DB",
+        icon: <SiTorbrowser />,
+        link: "https://www.torproject.org/",
+        label: "Tor_Network",
       },
+      { icon: <FaCode />, link: "https://regex101.com/", label: "Regex101" },
+      {
+        icon: <MdDraw />,
+        link: "https://excalidraw.com/",
+        label: "Excalidraw",
+      },
+      { icon: <FaEraser />, link: "https://eraser.io/", label: "Eraser.io" },
     ],
     personal: [
       {
-        icon: <img src={busuu} alt="Busuu" className="w-8" />,
+        icon: <SiReddit />,
+        link: "https://www.reddit.com/r/netsec/",
+        label: "r/netsec",
+      },
+      {
+        icon: <SiSpotify />,
+        link: "https://open.spotify.com/",
+        label: "Spotify",
+      },
+      {
+        icon: <FaBookReader />,
         link: "https://www.busuu.com/dashboard/timeline",
         label: "Busuu",
       },
       {
-        icon: <FaTiktok style={{ color: "#ffffff" }} />,
-        link: "https://www.tiktok.com/",
-        label: "TikTok",
-      },
-      {
-        icon: <GiMonkey style={{ color: "#e2b714" }} />,
+        icon: <GiMonkey />,
         link: "https://monkeytype.com/",
         label: "Monkeytype",
       },
       {
-        icon: <SiValorant style={{ color: "#ff4655" }} />,
-        link: "https://playvalorant.com/ar-ae/",
+        icon: <SiValorant />,
+        link: "https://playvalorant.com/",
         label: "Valorant",
       },
       {
-        icon: <TbBrandTed style={{ color: "#e40027" }} />,
+        icon: <TbBrandTed />,
         link: "https://www.ted.com/",
-        label: "TED",
+        label: "TED_Talks",
       },
       {
-        icon: <FaPinterestP style={{ color: "#bd081c" }} />,
-        link: "https://www.pinterest.com/",
-        label: "Pinterest",
-      },
-      {
-        icon: <SiNotion style={{ color: "#ffffff" }} />,
+        icon: <SiNotion />,
         link: "https://www.notion.so/",
-        label: "Notion",
+        label: "Notion_Base",
       },
       {
-        icon: <MdGTranslate style={{ color: "#8ab4f8" }} />,
+        icon: <MdGTranslate />,
         link: "https://translate.google.com/",
-        label: "Google Translate",
+        label: "G_Translate",
       },
-    ],
-    style: [
+      { icon: <SiFigma />, link: "https://www.figma.com/", label: "Figma" },
       {
-        icon: <SiUnsplash style={{ color: "#ffffff" }} />,
-        link: "https://unsplash.com/",
-        label: "Unsplash",
-      },
-      {
-        icon: <CgPexels style={{ color: "#07a081" }} />,
-        link: "https://www.pexels.com/",
-        label: "Pexels",
-      },
-      {
-        icon: <FaPenNib style={{ color: "#eb0074" }} />,
-        link: "https://www.wallpaperflare.com/",
-        label: "Wallpaper",
-      },
-      {
-        icon: <FaDribbble style={{ color: "#e60023" }} />,
+        icon: <FaDribbble />,
         link: "https://dribbble.com/",
         label: "Dribbble",
-      },
-      {
-        icon: <SiCanva style={{ color: "#00c4cc" }} />,
-        link: "https://www.canva.com/",
-        label: "Canva",
-      },
-      {
-        icon: <SiTailwindcss style={{ color: "#38b2ac" }} />,
-        link: "https://tailwindcomponents.com/cheatsheet/",
-        label: "Tailwind Cheatsheet",
       },
     ],
   };
 
   return (
-    <div className="category-section">
-      <h3 className="category-title">{title}</h3>
-      <div className="icon-grid">
+    <div
+      className={`bg-[#09090c] border ${t.border} ${t.hoverBorder} ${t.glow} p-6 rounded-lg transition-all duration-300 relative group`}>
+      {/* Decorative Corner Brackets */}
+      <div
+        className={`absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 ${t.corner} rounded-tl opacity-50 group-hover:opacity-100 transition-opacity`}></div>
+      <div
+        className={`absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 ${t.corner} rounded-tr opacity-50 group-hover:opacity-100 transition-opacity`}></div>
+      <div
+        className={`absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 ${t.corner} rounded-bl opacity-50 group-hover:opacity-100 transition-opacity`}></div>
+      <div
+        className={`absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 ${t.corner} rounded-br opacity-50 group-hover:opacity-100 transition-opacity`}></div>
+
+      <div
+        className={`flex items-center gap-3 mb-6 border-b border-slate-800/50 pb-2`}>
+        <h3
+          className={`text-lg font-bold ${t.text} tracking-wider uppercase drop-shadow-md`}>
+          // {title}
+        </h3>
+      </div>
+
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-6 gap-x-2">
         {icons[iconSet].map((item, index) => (
           <a
             href={item.link}
             key={index}
-            className="icon"
-            aria-label={item.label || title}
-            title={item.label || title}
-            rel="noreferrer">
-            {item.icon}
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-col items-center gap-2 group/icon outline-none"
+            aria-label={item.label}>
+            <div
+              className={`w-12 h-12 rounded-md flex items-center justify-center text-2xl text-slate-500 bg-[#0c0c12] border border-slate-800 transition-all duration-300 ${t.iconHover}`}>
+              {item.icon}
+            </div>
+            <span
+              className={`text-[10px] font-medium text-slate-500 ${t.text.replace("text-", "group-hover/icon:text-")} text-center truncate w-full px-1 transition-colors duration-300`}>
+              {item.label}
+            </span>
           </a>
         ))}
       </div>
