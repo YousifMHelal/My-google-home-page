@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/My-google-home-page/static/css/main.d323f102.css",
-    "main.js": "/My-google-home-page/static/js/main.81964492.js",
+    "main.css": "/My-google-home-page/static/css/main.74f036bd.css",
+    "main.js": "/My-google-home-page/static/js/main.426f185b.js",
     "static/media/profile.jpeg": "/My-google-home-page/static/media/profile.b1675725d757fb56e4f9.jpeg",
-    "static/media/busuu.png": "/My-google-home-page/static/media/busuu.d8e182dda270dc636a4c.png",
-    "static/media/gpt.svg": "/My-google-home-page/static/media/gpt.abd9ab14e5ebd4afd33085f1fc81ecd7.svg",
     "index.html": "/My-google-home-page/index.html",
-    "main.d323f102.css.map": "/My-google-home-page/static/css/main.d323f102.css.map",
-    "main.81964492.js.map": "/My-google-home-page/static/js/main.81964492.js.map"
+    "main.74f036bd.css.map": "/My-google-home-page/static/css/main.74f036bd.css.map",
+    "main.426f185b.js.map": "/My-google-home-page/static/js/main.426f185b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d323f102.css",
-    "static/js/main.81964492.js"
+    "static/css/main.74f036bd.css",
+    "static/js/main.426f185b.js"
   ]
 }
