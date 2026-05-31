@@ -123,14 +123,12 @@ function App() {
 
           <div className="flex-1 flex flex-col items-center md:items-start">
             <h1 className="text-3xl md:text-4xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-purple-500 mb-2 drop-shadow-[0_0_10px_rgba(192,38,211,0.5)]">
-              YOUSIF M. HELAL
+              YOUSIF M.HELAL
             </h1>
             <p className="text-slate-400 text-sm mb-6 uppercase tracking-widest">
               &gt; <span className="text-cyan-400">Full_Stack_Developer</span>{" "}
               //{" "}
-              <span className="text-rose-500">
-                Cyber_Security_Enthusiast
-              </span>
+              <span className="text-rose-500">Cyber_Security_Enthusiast</span>
             </p>
 
             {/* Top Quick Links */}
@@ -263,7 +261,6 @@ function App() {
 const TopLink = ({ href, icon, hoverColor }) => (
   <a
     href={href}
-
     rel="noreferrer"
     className={`flex items-center justify-center w-11 h-11 bg-[#0a0a0f] border border-slate-800 text-slate-400 rounded-lg transition-all duration-300 hover:-translate-y-1 ${hoverColor}`}>
     <div className="text-xl">{icon}</div>
@@ -526,7 +523,6 @@ const CategorySection = ({ title, iconSet, theme }) => {
           <a
             href={item.link}
             key={index}
-
             rel="noreferrer"
             className="flex flex-col items-center gap-2 group/icon outline-none"
             aria-label={item.label}>
