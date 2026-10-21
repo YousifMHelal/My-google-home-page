@@ -13,10 +13,11 @@ const toRgb = (hex) => {
 
 // Falling glyphs on a transparent canvas, so the page background shows through.
 // Column colour fades from `from` (left) to `to` (right); `boost` speeds the rain up.
-export default function GlyphRain({ from = "#22D3EE", to = "#E879F9", accent = "#FFFFFF", boost = false }) {
+export default function GlyphRain({ from = "#22D3EE", to = "#E879F9", accent = "#FFFFFF", boost = false, paused = false }) {
   const canvasRef = useRef(null);
   const frameMs = useRef(FRAME_MS);
-  const reduced = useReducedMotion();
+  const reducedMotion = useReducedMotion();
+  const reduced = reducedMotion || paused;
 
   useEffect(() => {
     frameMs.current = boost ? BOOST_FRAME_MS : FRAME_MS;

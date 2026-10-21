@@ -7,6 +7,8 @@ import profileImg from "./profile.jpeg";
 import { readableOnDark } from "./utils/brandColor";
 import { formatDate, formatTime12, greetingFor } from "./utils/time";
 
+const RAIN_PAUSED_KEY = "glyphRainPaused";
+
 // Start page: neon glow + glyph rain backdrop, gradient clock, Google search, brand-coloured link tiles.
 function Clock() {
   const now = useClock();
@@ -47,10 +49,33 @@ function App() {
   const inputRef = useRef(null);
   useSlashFocus(inputRef);
   const [query, setQuery] = useState("");
+  const [rainPaused, setRainPaused] = useState(
+    () => localStorage.getItem(RAIN_PAUSED_KEY) === "1"
+  );
+
+  const toggleRain = () => {
+    setRainPaused((prev) => {
+      const next = !prev;
+      localStorage.setItem(RAIN_PAUSED_KEY, next ? "1" : "0");
+      return next;
+    });
+  };
 
   return (
     <div className="relative min-h-screen bg-[#050509] bg-[radial-gradient(600px_400px_at_0%_0%,rgba(34,211,238,0.14),transparent_60%),radial-gradient(600px_400px_at_100%_100%,rgba(217,70,239,0.14),transparent_60%)] bg-fixed font-['Figtree'] text-[#E2E8F0] selection:bg-[#E879F9] selection:text-black">
-      <GlyphRain boost={query.length > 0} />
+      <GlyphRain boost={query.length > 0} paused={rainPaused} />
+      <button
+        type="button"
+        onClick={toggleRain}
+        aria-pressed={rainPaused}
+        title={rainPaused ? "Resume background animation" : "Pause background animation"}
+        className="fixed bottom-4 left-4 z-10 flex h-7 w-12 items-center rounded-full bg-[#10101A] p-1 ring-1 ring-[rgba(34,211,238,0.12)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E879F9]">
+        <span
+          className={`h-5 w-5 rounded-full bg-gradient-to-br from-[#22D3EE] to-[#E879F9] shadow-[0_0_8px_rgba(232,121,249,0.5)] transition-transform duration-200 ${
+            rainPaused ? "translate-x-0" : "translate-x-5"
+          }`}
+        />
+      </button>
       {/* Content is laid out at 80% scale (the size that reads best at 100% browser zoom); the rain stays full-screen. */}
       <main className="relative mx-auto max-w-[1440px] px-4 py-6 [zoom:0.8] sm:px-8">
         <header className="flex flex-wrap items-center justify-between gap-4">
